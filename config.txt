@@ -1,0 +1,45 @@
+[Types]
+stagnation_type      = DefaultStagnation
+reproduction_type    = DefaultReproduction
+
+[phenotype]
+initial_empty        = 30
+initial_bathrooms    = 0
+entrances            = 0
+
+initial_connection   = floorplan
+#initial_connection   = partial 1
+max_weight           = 1
+min_weight           = 0
+weight_stdev         = .5
+
+[genetic]
+pop_size                = 50
+max_fitness_threshold   = 10.0
+prob_add_conn           = 0.4
+prob_add_node           = 0.3
+prob_delete_conn        = 0.1
+prob_delete_node        = 0.1
+prob_mutate_weight      = 0.1
+prob_replace_weight     = 0.05
+weight_mutation_power   = 0.25
+prob_mutate_activation  = 0.0
+prob_toggle_link        = 0.01
+reset_on_extinction     = 1
+
+prob_switch_rooms = .2
+prob_shuffle_rooms = .1
+
+[genotype compatibility]
+compatibility_threshold = 1.8
+excess_coefficient      = 1.0
+disjoint_coefficient    = 1.0
+weight_coefficient      = 0.5
+
+[DefaultStagnation]
+species_fitness_func = max
+max_stagnation      = 100
+
+[DefaultReproduction]
+survival_threshold  = 0.2
+elitism               = 2

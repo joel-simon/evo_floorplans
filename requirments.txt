@@ -1,0 +1,7 @@
+pygame
+networkx
+box2d
+pyhull
+pyvoro
+pyclipper
+neat-python==0.7
